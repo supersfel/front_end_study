@@ -1,0 +1,15 @@
+
+body{
+    margin : 0;
+    padding : 0;
+}
+
+span{
+    background : yellowgreen;
+    width : 100px; /* 인라인 요소 : 가로사이즈 설정 불가*/
+    height : 130px;
+    margin : 20px;
+    padding : 20px;
+    /*display : block; /*인라인요소 > 블럭요소*/    
+   
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .section{
+            background: gray;
+        }
+    </style> <!-- 요소에 적용할 css 선언 -->
+</head>
+<body>
+    <div class="section">안녕</div><!-- 중복해서 써도 가능-->
+    <div class="section">안녕</div>
+    <div class="section">안녕</div>
+    <div class="section">안녕</div>
+    <div class="section">안녕</div>
+    <div id ="section">안녕</div>   <!-- 중복해서 쓰면 안됨-->
+
+    <script>
+        const section = document.querySelector('.section');
+        const sectionId = document.getElementById('section');
+    </script>
+    
+</body>
+</html>

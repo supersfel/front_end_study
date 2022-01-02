@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./table.css">
+</head>
+<body>
+        <table>   <!-- 표 영역 표시-->
+            <tr>
+                <th colspan = "3" id="th-data">데이터</th> <!-- 열 병합 -->
+            </tr>  
+
+            <tr>
+                <th> </th>
+                <th abbr = "type" scoper ="col" headers="th-data">타입</th>   <!-- th-data 에 종속되어 있다-->
+                <th abbr = "value" scoper ="col" headers="th-data">값</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>알파벳</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>숫자</td>
+                <td>7</td>
+            </tr>
+        </table>
+</body>
+</html>

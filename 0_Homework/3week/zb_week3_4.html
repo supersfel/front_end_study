@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>과제 4번</title>
+
+    <style>
+      ul {
+        list-style: none;
+      }
+      .colors li:nth-child(3) {
+        color: green;
+      }
+
+      .colors li:first-child::after {
+        content: "panther";
+        color: pink;
+        margin-left: 5px;
+      }
+
+      .colors li:nth-child(4)::before {
+        content: "this is";
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="colors">
+      <li>pink</li>
+      <li>yellow</li>
+      <li>green</li>
+      <li>blue</li>
+      <li>red</li>
+    </ul>
+  </body>
+</html>

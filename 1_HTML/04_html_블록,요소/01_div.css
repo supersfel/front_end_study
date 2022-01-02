@@ -1,0 +1,15 @@
+
+body{
+    margin : 0;
+    padding : 0;
+}
+
+div{
+    background : yellowgreen;
+    width : 100px; /* 인라인 요소 : 가로사이즈 설정 불가*/
+    height : 30px;
+    margin : 20px;
+    padding : 20px;
+    /* display : inline; <인라인 요소로 만듬 */
+    
+}

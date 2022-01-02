@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/login" method = "GET" id = "login-form">
+        <input type="text" autofocus form = "login-form"> <!-- 떨어져있어도 전달가능-->
+        <input type="email" name = "id">
+        <input type="password" name = "ps" maxlength="6">
+        <input type="submit" value = "로그인">
+        <input type="number" value = "1234" readonly>
+        <input type="number" placeholder = "숫자를 입력하세요!">
+        <input type="number" max ="30" min = "4" step ="4">
+        <input type="checkbox" checked>
+        <input type="file" multiple>
+        <input type="image" src="./heropy.png" alt="mingyu"> <!-- 제출버튼으로 사용 가능-->
+        <input type="radio" name = "raido1">      
+        <input type="radio" name = "raido1" checked>       
+        <input type="radio" name = "raido1">       <!-- 3지선다--> 
+        <input type="reset" value = "초기화"> <!-- form태그 안에만 초기화가된다-->        
+    </form>
+</body>
+</html>

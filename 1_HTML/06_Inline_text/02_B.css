@@ -1,0 +1,41 @@
+b{
+    font-weight: normal;
+    color : brown;
+    
+}
+
+em{
+    font-style: normal;
+    font-weight : bold;
+
+}
+
+strong{
+    color : yellowgreen;
+}
+
+span {
+    text-decoration : underline;
+}
+
+code{
+    color : orange;
+    background:  lightgray;
+    padding:3;
+}
+
+kbd{
+    padding : 0 3px;
+    border-radius: 3px;
+    border-top :2px solid rgb(240, 240, 240);
+    border-bottom: solid rgb(205, 205, 205);
+    border-left: 2px solid rgb(240, 240, 240);
+    border-right: 2px solid rgb(240, 240, 240);
+}
+time{
+    color : orangered;
+}
+
+.exam{
+    
+}

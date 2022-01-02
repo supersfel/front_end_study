@@ -1,0 +1,29 @@
+* {
+  list-style: none;
+}
+
+ul {
+  background-color: lightgray;
+  width: 300px;
+  padding: 0;
+  /* 코드 작성 */
+  display : flex;
+  flex-wrap : wrap;
+
+  li {
+    background: #444;
+    color: #fff;
+    /* 코드 작성 */
+    display: flex;
+    width : 100%;
+    justify-content: center;
+    margin : 10px 0px;
+
+    &:nth-child(2){
+      background-color: coral;
+    }
+    &:nth-child(4){
+      background-color: green;
+    }    
+  }
+}

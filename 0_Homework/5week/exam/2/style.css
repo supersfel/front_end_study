@@ -1,0 +1,40 @@
+.container {
+  width: 400px;
+  /* 코드 작성 */
+  clear: both; /*float 해제*/
+  display: block;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  /* 코드 작성 */
+  float: left;
+  position: relative;
+}
+
+.item:nth-child(1) {
+  background-color: pink;
+  /* 코드 작성 */
+  width: 200px; /*크기조절*/
+  height: 200px;
+  float: right; /*우측으로 보내기*/
+}
+
+.item:nth-child(2) {
+  background-color: yellow;
+}
+
+.item:nth-child(3) {
+  background-color: lightGreen;
+}
+
+.item:nth-child(4) {
+  background-color: skyBlue;
+  /* 코드 작성 */
+}
+
+.item:nth-child(5) {
+  background-color: lightGrey;
+  /* 코드 작성 */
+}

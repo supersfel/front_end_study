@@ -1,0 +1,144 @@
+/* 수정 금지 */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: normal;
+  color: black;
+}
+.main {
+  box-sizing: border-box;
+  width: 980px;
+  padding: 20px;
+  margin: 0 auto;
+  background: lightgray;
+}
+.main-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+section {
+  width: 100%;
+  margin: 20px 0;
+  background: lightsteelblue;
+}
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: blue;
+}
+
+/* 코드는 이 곳에서부터 작성합니다. */
+/* 미리 제공된 CSS 선택자 외에 추가로 필요한 선택자가 있을 경우 추가하셔도됩니다. */
+
+/* 문제 1 */
+.news-link {
+  background: teal;
+  display: block;
+  width: 50%; /*부모 요소 너비의 절반*/
+  margin-top: 10px; /* 위 바깥쪽 여백 */
+  padding: 10px; /* 안쪽 여백 */
+  text-decoration: none; /* 텍스트 색은 상속 , 장식은 제거 */
+}
+.news-item {
+  background: yellowgreen;
+  height: 100px; /* 높이 100px */
+  padding-left: 130px; /*왼쪽 안 여백 130px */
+  position: relative; /* position 상속을 위한 선언 */
+  color: black;
+  padding-bottom: 10px; /* 밑의 여백을 추가하였습니다 */
+}
+.news-item-heading {
+  font-weight: border; /* 제목을 진하게 */
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-item-brief {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+.news-item-thumbnail {
+  width: 120px; /* 너비 120 */
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(0, -50%);
+  /*50%에서 이미지가 시작하기에 정중앙에 오도록 사용 */
+}
+
+/* 문제 2 */
+.float-container {
+  width: 100%;
+  overflow: hidden; /*잃어버린 높이 복구*/
+}
+.float-item {
+  width: 50%;
+  float: left; /*왼쪽 float */
+  box-sizing: border-box; /* 너비가 여백,테두리 포함*/
+}
+.news-link2 {
+  width: 100%; /*overwrite한 속성*/
+  box-sizing: border-box; /* 너비가 여백,테두리 포함*/
+}
+
+/* 문제 3 */
+.flex-container {
+  background: yellowgreen;
+  height: 600px; /*높이 600 */
+  display: flex;
+  flex-flow: row wrap; /*줄바꿈 처리 및 주축설정 */
+  justify-content: center; /*자식 요소 x축 정렬*/
+  align-content: center; /*자식 요소 y축 정렬*/
+}
+.flex-item {
+  background: tomato;
+  border: 2px dashed red;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+
+  display: flex; /*자신 컨텐츠를 가운데 정렬 */
+  justify-content: center;
+  align-items: center;
+}
+
+/* 문제 4 */
+.q4 {
+}
+.smile-face {
+  width: 200px; /*너비와 높이*/
+  height: 200px;
+  margin: 10px; /*외부여백 */
+
+  background-image: url("./smile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  animation: move 2s infinite alternate; /*1초후 2초에걸쳐 반복*/
+  animation-timing-function: linear;
+  animation-delay: 1s;
+
+  position: relative; /*얼굴만 표시하기 위함*/
+  border-radius: 75%;
+  background-position: top;
+}
+
+.smile-face:hover {
+  /*hover시 멈춤 */
+  animation-play-state: paused;
+}
+@keyframes move {
+  0% {
+  }
+  100% {
+    transform:  translate(400px) rotate(360deg);
+  }
+}

@@ -1,0 +1,48 @@
+header{
+    background: yellowgreen;
+    padding-bottom: 0px;
+
+}
+
+header h1{
+
+}
+
+header img {
+    display : block;
+    
+
+}
+
+main{
+    background: tomato;
+
+}
+
+main h2{
+
+}
+
+main h3{
+    width: 300px;
+    height: 120px;
+    background: red;
+
+}
+
+footer{
+    background: thistle;
+
+}
+
+footer h2{
+
+}
+
+footer h3{
+    width: 300px;
+    height: 120px;
+    background: blue;
+
+}
+
