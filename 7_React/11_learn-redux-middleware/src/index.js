@@ -10,6 +10,7 @@ import rootReducer from './modules';
 import logger from 'redux-logger';
 import {composeWithDevTools} from 'redux-devtools-extension';  //개발자도구 적용
 import ReduxThunk from 'redux-thunk';
+import { BrowserRouter } from 'react-router-dom';
 
 
 const store = createStore(
@@ -19,9 +20,11 @@ const store = createStore(
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
