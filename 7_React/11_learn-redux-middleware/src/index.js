@@ -6,25 +6,40 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore , applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import rootReducer from './modules';
+import rootReducer, { rootSaga } from './modules';
 import logger from 'redux-logger';
 import {composeWithDevTools} from 'redux-devtools-extension';  //개발자도구 적용
 import ReduxThunk from 'redux-thunk';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
+import {createBrowserHistory} from 'history';
+import createSagaMiddleware from 'redux-saga';
 
+const customHistory = createBrowserHistory();
+const sagaMiddleware = createSagaMiddleware({
+  context : {
+    history : customHistory   // saga에서 조회가 가능
+  }
+});
 
 const store = createStore(
   rootReducer, 
-  composeWithDevTools(applyMiddleware(ReduxThunk, logger)));//미들웨어 적용
+  composeWithDevTools(
+    applyMiddleware(
+      sagaMiddleware,
+      ReduxThunk.withExtraArgument({history : customHistory}),
+      logger
+    )));//미들웨어 적용
+
+    sagaMiddleware.run(rootSaga) //rootSaga를 호출할 필요는
 
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router history  = {customHistory}>
     <Provider store={store}>
       <App />
     </Provider>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root')
 );
 

@@ -13,7 +13,7 @@ function PostListContainer() {
         dispatch(getPosts())
     },[dispatch])
 
-    if (loading) return <div>로딩중..</div>
+    if (loading && !data) return <div>로딩중..</div>   //데이터가 있다면 로딩중이 안뜨게
     if (error) return <div>에러 발생!</div>
     if (!data) return  null;
 
