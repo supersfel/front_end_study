@@ -8,9 +8,9 @@ import GithubProfileLoader from "./containers/GithubProfileLoader";
 function App() {
   return (
     <>
-      {/* <CounterContainer />
-      <TodoApp /> */}
-      <GithubProfileLoader />
+      {/* <CounterContainer /> */}
+      <TodoApp />
+      {/* <GithubProfileLoader /> */}
     </>
   );
 }
