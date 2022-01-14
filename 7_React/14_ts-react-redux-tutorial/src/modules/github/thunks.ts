@@ -19,6 +19,7 @@ export function getUserProfileThunk(
       dispatch(success(userProfile));
     } catch (e: any) {
       //??
+
       dispatch(failure(e));
     }
   };

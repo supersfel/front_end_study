@@ -5,6 +5,7 @@ export async function getUserProfile(username: string) {
   const response = await axios.get<GithubProfile>(
     `https://api.github.com/users/${username}`
   );
+
   return response.data;
 }
 
