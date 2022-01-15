@@ -1,0 +1,25 @@
+body {
+  background-color: #232c34;
+  text-align: center;
+}
+
+div {
+  color: red;
+}
+
+.helloWebpack {
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  counter-reset: #09d3ac;
+}
+
+.slackImg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: 0px;
+}
