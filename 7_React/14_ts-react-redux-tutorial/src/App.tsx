@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       {/* <CounterContainer /> */}
-      <TodoApp />
-      {/* <GithubProfileLoader /> */}
+      {/* <TodoApp /> */}
+      <GithubProfileLoader />
     </>
   );
 }
