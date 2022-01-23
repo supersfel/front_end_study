@@ -1,0 +1,22 @@
+.bookintro {
+  width: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+  margin: 3rem;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.5rem;
+}
