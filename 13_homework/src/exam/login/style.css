@@ -1,0 +1,51 @@
+/* 코드 구현 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  margin: 10% auto;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.form {
+  width: 100%;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 65%;
+  border: 0px;
+  border-bottom: 1px solid #707070;
+}
+
+input:focus {
+  outline: 2px solid blue;
+  border-radius: 5px;
+}
+
+.warningText {
+  display: none;
+  margin-top: 0.5rem;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #dd0000;
+}
+
+.loginBtn {
+  margin-top: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  height: 4rem;
+  background: #acacac;
+  font-size: 1.5rem;
+}
