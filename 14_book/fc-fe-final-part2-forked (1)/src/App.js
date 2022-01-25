@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { bookSearch } from "./api/Api";
 import Book from "./Book";
 import "./css/App.css";
@@ -68,8 +68,8 @@ function App() {
       price: "",
       sale_price: "",
       status: "",
-      url: ""
-    }
+      url: "",
+    },
   ];
 
   const [loading, setLoading] = useState(false);
@@ -78,6 +78,8 @@ function App() {
   const [books, setBooks] = useState(initialbooks);
   const [fetching, setFetching] = useState(false);
   const [page, setPage] = useState(1);
+
+  const pageNumber = useRef(1); // useRef 선언
 
   useEffect(() => {
     if (query.length > 0) {
@@ -98,7 +100,7 @@ function App() {
       sort: "accuracy",
       page: 1,
       size: 10,
-      target: "title"
+      target: "title",
     };
     const { data } = await bookSearch(params)
       .then()
@@ -119,7 +121,7 @@ function App() {
       sort: "accuracy",
       page: page,
       size: 10,
-      target: "title"
+      target: "title",
     };
     const { data } = await bookSearch(newparams)
       .then()
@@ -127,11 +129,14 @@ function App() {
         console.log("error");
       }); // api 호출
 
-    const fetchedData = data.documents; // 피드 데이터 부분
-    // 기존 데이터 배열과 새로 받아온 데이터 배열을 합쳐 새 배열을 만들고 state에 저장한다.
-    const newbooks = [...books, ...fetchedData];
+    // const fetchedData = data.documents; // 피드 데이터 부분
+    // // 기존 데이터 배열과 새로 받아온 데이터 배열을 합쳐 새 배열을 만들고 state에 저장한다.
+    // const newbooks = [...books, ...fetchedData];
+    // setBooks(newbooks);
 
-    setBooks(newbooks);
+    const fetchedData = data.documents;
+    setBooks((prev) => [...prev, ...fetchedData]);
+
     console.log(newbooks);
     console.log(books);
 
@@ -144,8 +149,8 @@ function App() {
     const clientHeight = document.documentElement.clientHeight;
     if (scrollTop + clientHeight >= scrollHeight && fetching === false) {
       // 페이지 끝
-      setPage(page + 1);
-      fetchbooks(query, page);
+      pageNumber.current += 1;
+      fetchbooks(query, pageNumber.current);
     }
   };
 
