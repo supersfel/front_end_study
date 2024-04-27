@@ -5,7 +5,7 @@ import Parent from "./components/Parent";
 import Child from "./components/Child";
 
 function App() {
-  return <Parent></Parent>;
+  return <Parent Compo={<p>안녕하세요</p>}></Parent>;
 }
 
 export default App;
