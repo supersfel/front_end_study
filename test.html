@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style>
-    body {
-      margin: 0;
-    }
-  </style>
   <body>
-    Hello
+    <input type="text" class="hi" />
+    <button>가져오기</button>
   </body>
+  <script>
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", () => {
+      const input = document.querySelector(".hi");
+      console.log(input.value);
+    });
+  </script>
 </html>
